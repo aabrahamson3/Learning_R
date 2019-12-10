@@ -60,6 +60,11 @@ cps_skools %>% as.data.frame() # note: isn't that non-sensical?
 
 cps_skools %>% nrow() # note: the console returned 661
 
+cps_skools %>% ncol()
+
+# this returns rows that are high schoolscps  
+cps_skools %>% filter(Is_High_School == 'Y') %>% select(School_ID, Is_High_School)
+
 n_row <- cps_skools %>% nrow() # note: the console returned nothing.
 
 # 5. Wait. Slow down. What the heck is %>%? --------
